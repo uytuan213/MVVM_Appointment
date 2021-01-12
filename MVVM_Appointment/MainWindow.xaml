@@ -6,16 +6,19 @@
         xmlns:local="clr-namespace:MVVM_Appointment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Background.png"/>
+    </Window.Background>
     <DockPanel>
         <DockPanel DockPanel.Dock="Left">
-            <Border DockPanel.Dock="Top" 
-                    Style="{StaticResource HeaderBorder}">
+            <Border DockPanel.Dock="Top">
                 <Label Style="{StaticResource HeaderLabel}">
                     Control Panel
                 </Label>
             </Border>
-            
-            <ListView Name="lstCommands">
+
+            <ListView Name="lstCommands"
+                      ItemsSource="{Binding NavigationCommands}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
@@ -30,7 +33,7 @@
         <DockPanel>
             <Frame Name="mainFrame" 
                    NavigationUIVisibility="Hidden"
-                   Source="Views/AddCustomer.xaml"/>
+                   Source="{Binding CurrentPage}"/>
         </DockPanel>
     </DockPanel>
 </Window>

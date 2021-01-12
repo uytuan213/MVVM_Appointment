@@ -19,7 +19,8 @@
                       HorizontalContentAlignment="Stretch"
                       ColumnWidth="*"
                       CanUserAddRows="False"
-                      AutoGenerateColumns="False">
+                      AutoGenerateColumns="False"
+                      Margin="10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Customer Name" Binding="{Binding AppoCustomer}"/>
                     <DataGridTemplateColumn Header="Appointment Date">
@@ -43,7 +44,8 @@
                     </DataGridComboBoxColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Content="Save Changes"
+            <Button Style="{StaticResource btnTransparent}"
+                    Content="Save Changes"
                     Width="150"
                     Margin="10"/>
         </StackPanel>

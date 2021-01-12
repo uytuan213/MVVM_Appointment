@@ -66,11 +66,16 @@
             </StackPanel>
             <StackPanel Margin="10,5" Orientation="Horizontal">
                 <Label Content="Time of Appointment:"/>
-                <ComboBox ItemsSource="{Binding AppointmentTimes}"
-                          SelectedItem="{Binding SelectedTime}"
-                          Width="150"/>
+                <ComboBox Style="{StaticResource cbbTransparent}"
+                        ItemsSource="{Binding AppointmentTimes}"
+                        SelectedItem="{Binding SelectedTime}"
+                        Width="150"/>
             </StackPanel>
-            <Button Margin="10" Content="Add Appointment" Width="150" Command="{Binding cmdAddAppointment}"/>
+            <Button Style="{StaticResource btnTransparent}" 
+                    Margin="10" 
+                    Content="Add Appointment" 
+                    Width="150" 
+                    Command="{Binding cmdAddAppointment}"/>
         </StackPanel>
     </DockPanel>
 </Page>

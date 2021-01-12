@@ -9,8 +9,7 @@
       Title="AddCustomer">
 
     <DockPanel>
-        <Border DockPanel.Dock="Top" 
-                Style="{StaticResource HeaderBorder}">
+        <Border DockPanel.Dock="Top" Style="{StaticResource HeaderBorder}">
             <Label Style="{StaticResource HeaderLabel}" Content="{Binding DisplayName}"/>
         </Border>
         <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
@@ -26,7 +25,7 @@
                 <Label Style="{StaticResource formLabel}" Content="Last name: "/>
                 <TextBox Style="{StaticResource formTextbox}" Name="txtLastName"/>
             </StackPanel>
-            <Button Content="Add" Width="100" Margin="5,5" Command="{Binding cmdAddCustomer}">
+            <Button Style="{StaticResource btnTransparent}" Content="Add" Width="100" Margin="5,5" Command="{Binding cmdAddCustomer}">
                 <Button.CommandParameter>
                     <MultiBinding Converter="{StaticResource myMultiConverter}">
                         <Binding ElementName="txtFirstName" Path="Text"/>

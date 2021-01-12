@@ -9,15 +9,13 @@
       Title="AboutMe">
 
     <DockPanel>
-        <Border DockPanel.Dock="Top" 
-                Style="{StaticResource HeaderBorder}">
+        <Border DockPanel.Dock="Top" Style="{StaticResource HeaderBorder}">
             <Label DockPanel.Dock="Top"
                    Style="{StaticResource HeaderLabel}">
                 About
             </Label>
         </Border>
-        <StackPanel Width="500" Margin="10,10">
-            <TextBlock Text="This project to demonstrate WPF MVVM pattern along with the implementation of style, data binding and command." TextWrapping="Wrap"/>
+        <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="15">
             <TextBlock Text="Developer: Tony Trieu" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock>
@@ -33,6 +31,9 @@
                     </Hyperlink>
                 </TextBlock>
             </StackPanel>
+        </StackPanel>
+        <StackPanel Width="500" Margin="10,10">
+            <TextBlock Text="This project to demonstrate WPF MVVM pattern along with the implementation of style, data binding and command." TextWrapping="Wrap"/>
         </StackPanel>
     </DockPanel>
 </Page>

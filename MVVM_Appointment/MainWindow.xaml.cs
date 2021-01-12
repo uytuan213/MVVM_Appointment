@@ -25,14 +25,7 @@ namespace MVVM_Appointment
         public MainWindow()
         {
             InitializeComponent();
-            ObservableCollection<CommandViewModel> commands = new ObservableCollection<CommandViewModel>()
-            {
-                new CommandViewModel("Add Customer", new RelayCommand(x => mainFrame.Source=new Uri("Views/AddCustomer.xaml", UriKind.Relative))),
-                new CommandViewModel("Add Appointment", new RelayCommand(x => mainFrame.Source=new Uri("Views/AddAppointment.xaml", UriKind.Relative))),
-                new CommandViewModel("All Appointments", new RelayCommand(x => mainFrame.Source=new Uri("Views/AllAppointments.xaml", UriKind.Relative))),
-                new CommandViewModel("About me", new RelayCommand(x => mainFrame.Source=new Uri("Views/AboutMe.xaml", UriKind.Relative))),
-            };
-            lstCommands.ItemsSource = commands;
+            DataContext = new MainWindowViewModel();
         }
     }
 }
